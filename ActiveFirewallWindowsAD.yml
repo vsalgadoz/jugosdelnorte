@@ -2,7 +2,7 @@
 - hosts: INFRA
   gather_facts: no
   tasks:
-  -  name: Probar conexión al servidor {{ INFRA }}
+  -  name: Probar conexión al servidor
      win_ping:
 
   - name: Habilitar firewall en perfil Dominio
