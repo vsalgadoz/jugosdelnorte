@@ -1,3 +1,13 @@
 ---
-hosts: INFRA
-become: true
+- hosts: INFRA
+  gather_facts: no
+  tasks:
+  -  name: Probar conexión al servidor {{ INFRA }}
+     win_ping:
+
+  - name: Habilitar firewall en perfil Dominio
+    win_firewall:
+      state: enabled
+      profiles:
+      - Domain
+
