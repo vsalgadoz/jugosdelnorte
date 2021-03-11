@@ -1,5 +1,5 @@
 ---
-- hosts: INFRA
+- hosts: adservers
   gather_facts: no
   tasks:
   -  name: Probar conexión al servidor {{ INFRA }}
