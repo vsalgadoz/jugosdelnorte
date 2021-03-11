@@ -1,0 +1,13 @@
+---
+- hosts: INFRA
+  gather_facts: no
+  tasks:
+  - name: Probar conexión al servidor
+    win_ping:
+
+  - name: Borrar programas no permitidos
+    win_package:
+      path: C:\Program Files\WinRAR\uninstall.exe
+      product_id: WinRAR archiver
+      arguments: /S
+      state: absent
