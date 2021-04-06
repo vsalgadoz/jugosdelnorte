@@ -4,10 +4,13 @@
   tasks:
   - name: Probar conexión al host
     win_ping:
-
-  - name: Instalar sapgui
+  - name: Descargar WinRar
     win_package:
-      path: C:\Program Files\WinRAR\uninstall.exe
+      path: https://www.winrar.es/descargas/103/descargar-winrar-para-windows-x64-en-espanol
       product_id: WinRAR archiver
       arguments: /S
-      state: absent
+      state: present
+  - name: Descargar archivo rar
+    win_package:
+      path: https://drive.google.com/u/0/uc?export=download&confirm=6WqN&id=1WgmKh4-Jc5XW77Ek-aiB0TuFpWoQkPtI
+  
