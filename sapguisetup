@@ -1,0 +1,13 @@
+---
+- hosts: winworkstation
+  gather_facts: no
+  tasks:
+  - name: Probar conexión al host
+    win_ping:
+
+  - name: Instalar sapgui
+    win_package:
+      path: C:\Program Files\WinRAR\uninstall.exe
+      product_id: WinRAR archiver
+      arguments: /S
+      state: absent
